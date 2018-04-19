@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.hc.datepicker.MainActivity">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+        <ImageView
+                android:id="@+id/last_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/select_month"
+                android:padding="10dp"
+                android:rotation="180"
+                android:scaleType="center"
+                android:src="@mipmap/arrow_right"
+                tools:ignore="ContentDescription"/>
+
+        <TextView
+                android:id="@+id/select_month"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/main_text_black"
+                android:textSize="14sp"/>
+
+        <ImageView
+                android:id="@+id/next_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/select_month"
+                android:padding="10dp"
+                android:scaleType="center"
+                android:src="@mipmap/arrow_right"
+                tools:ignore="ContentDescription"/>
+
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/common_divider_bg"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.hc.datepicker.view.MyWeekView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+    <com.example.hc.datepicker.view.MyCalendar
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
